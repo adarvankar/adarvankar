@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 app.secret_key = 'kavishree_secret_2024'
 
-DB_PATH = os.path.join(os.path.dirname(__file__), 'database.db')
+DB_PATH = '/tmp/database.db'
 
 ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = 'kavishree@123'
