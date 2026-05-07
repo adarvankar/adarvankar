@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Admin Login | Kavishree Enterprises{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="admin-login-card">
+                    <div class="text-center mb-4">
+                        <div class="admin-logo"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h3>Admin Login</h3>
+                        <p class="text-muted">Kavishree Enterprises – Dashboard</p>
+                    </div>
+                    <form method="POST" action="/admin/login">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" name="username" class="form-control form-control-ke" required autofocus>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control form-control-ke" required>
+                        </div>
+                        <button type="submit" class="btn btn-gold w-100 btn-lg"><i class="bi bi-box-arrow-in-right me-2"></i>Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

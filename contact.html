@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us | Kavishree Enterprises{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-custom">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Contact Us</li>
+            </ol>
+        </nav>
+        <h1>Contact <span class="text-gold">Us</span></h1>
+        <p>Send us an inquiry or reach us directly via call or WhatsApp.</p>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+                <div class="contact-form-wrap">
+                    <h3 class="mb-4">Send an Inquiry</h3>
+                    <form method="POST" action="/contact" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label class="form-label">Full Name <span class="text-gold">*</span></label>
+                                <input type="text" name="name" class="form-control form-control-ke" placeholder="Your full name" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Phone Number <span class="text-gold">*</span></label>
+                                <input type="tel" name="phone" class="form-control form-control-ke" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-control form-control-ke" placeholder="your@email.com">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Service Required <span class="text-gold">*</span></label>
+                                <select name="service" class="form-select form-control-ke" required>
+                                    <option value="" disabled selected>-- Select a Service --</option>
+                                    <option>GST Registration</option>
+                                    <option>GST Return Filing</option>
+                                    <option>ITR Filing</option>
+                                    <option>Accounting Services</option>
+                                    <option>Digital Signature (DSC)</option>
+                                    <option>Computer Repair</option>
+                                    <option>Other / General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message / Details</label>
+                                <textarea name="message" class="form-control form-control-ke" rows="4" placeholder="Describe your requirement..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-gold btn-lg w-100">
+                                    <i class="bi bi-send-fill me-2"></i> Submit Inquiry
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="col-lg-5">
+                <h3 class="mb-4">Get in Touch</h3>
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p><a href="tel:+919999999999">+91 77980 93087</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon ci-wa"><i class="bi bi-whatsapp"></i></div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p><a href="https://wa.me/919999999999" target="_blank">+91 77980 93087</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:info@kavishree.com">kadarvankar@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <strong>Office Address</strong>
+                            <p>Warora, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="bi bi-clock-fill"></i></div>
+                        <div>
+                            <strong>Working Hours</strong>
+                            <p>Mon – Sat: 9:00 AM – 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wa-cta-box mt-4">
+                    <i class="bi bi-whatsapp"></i>
+                    <div>
+                        <strong>Prefer WhatsApp?</strong>
+                        <p>Chat with us directly for instant queries and support.</p>
+                        <a href="https://wa.me/919999999999" class="btn btn-wa btn-sm mt-1" target="_blank">Start Chat</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
